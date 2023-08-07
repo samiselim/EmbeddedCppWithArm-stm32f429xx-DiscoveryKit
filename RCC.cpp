@@ -9,7 +9,7 @@ MRCC::~MRCC()
 	rccError = MRCC_OK;
 }
 
-MRCC_GPIO_Error_t MRCC::MRCC_GPIO_Port_Init(MRCC_GPIO_PORTS_t gpioPort)
+MRCC_GPIO_Error_t MRCC::MRCC_GPIO_EnableClock(MRCC_GPIO_PORTS_t gpioPort)
 {
     MRCC_GPIO_Error_t Error;
     if(gpioPort < MRCC_GPIOA || gpioPort > MRCC_GPIOK)
@@ -18,9 +18,10 @@ MRCC_GPIO_Error_t MRCC::MRCC_GPIO_Port_Init(MRCC_GPIO_PORTS_t gpioPort)
     }
     else
     {
-        AHB1ENR |= (0x0001<<gpioPort);
+        RCC_AHB1ENR |= (0x0001<<gpioPort);
         Error = MRCC_OK;    
     }
 
     return Error;
 }
+
