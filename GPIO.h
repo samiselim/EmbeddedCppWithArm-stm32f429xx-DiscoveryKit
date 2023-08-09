@@ -136,7 +136,7 @@ class MGPIO
     public:
     MGPIO_ErrorType_t MGPIO_InitPinError;
 
-    MGPIO(MGPIO_PORTS_t MGPIO_portName);
+    MGPIO();
     MGPIO_ErrorType_t MGPIO_InitPin(MGPIO_PinConfig * userCfg);
     MGPIO_PIN_STATE_t MGPIO_GetPin(MGPIO_PinConfig * userCfg);
     MGPIO_ErrorType_t MGPIO_SetPin(MGPIO_PinConfig * userCfg , MGPIO_PIN_STATE_t PinState);
