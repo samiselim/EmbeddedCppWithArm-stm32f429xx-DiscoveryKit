@@ -1,8 +1,6 @@
 #include "LED.h"
 #include "LED_Cfg.h"
 
-
-
 extern MGPIO_PinConfig LED_Config[LED_NUMBER];
 MGPIO gpio_object[LED_NUMBER];
 led::led()
@@ -13,7 +11,9 @@ led::led()
     }
 }
 
-void led::set_Led_State(Led_State_t _state , MGPIO_PIN_NUMBER_t Led_Num)
+
+
+void led::LED_set_Led_State(Led_State_t _state , MGPIO_PIN_NUMBER_t Led_Num)
 {   
     if(_state == ON)
     {
@@ -49,7 +49,7 @@ void led::set_Led_State(Led_State_t _state , MGPIO_PIN_NUMBER_t Led_Num)
     }
 }
 
-Led_State_t led::get_Led_State( MGPIO_PIN_NUMBER_t Led_Num)
+Led_State_t led::LED_get_Led_State( MGPIO_PIN_NUMBER_t Led_Num)
 {
     Led_State_t led_state;
 
@@ -65,4 +65,18 @@ Led_State_t led::get_Led_State( MGPIO_PIN_NUMBER_t Led_Num)
         }
     }
     return led_state;
+}
+void led::LED_ToggleLed(MGPIO_PIN_NUMBER_t Led_Num)
+{   
+    for(int i=0 ; i<LED_NUMBER ; i++)
+    {
+        if(LED_Config[i].MGPIO_pinNumber == Led_Num)
+        {
+            gpio_object[i].MGPIO_TogglePin(&LED_Config[i]);
+        }
+        else
+        {
+            // TODO
+        }
+    }
 }

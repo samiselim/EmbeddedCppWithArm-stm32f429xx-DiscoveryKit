@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\Objects\project.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\Objects\project.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6190004: Last Updated: Mon Aug 28 14:53:06 2023
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6190004: Last Updated: Mon Aug 28 18:31:04 2023
 <BR><P>
 <H3>Maximum Stack Usage =         76 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -682,10 +682,10 @@ Global Symbols
 <P><STRONG><a name="[64]"></a>SystemInit</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, system_stm32f4xx.o(.text.SystemInit))
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f429xx.o(.text)
 </UL>
-<P><STRONG><a name="[7e]"></a>led::set_Led_State(Led_State_t, MGPIO_PIN_NUMBER_t)</STRONG> (Thumb, 212 bytes, Stack size 24 bytes, led.o(.text._ZN3led13set_Led_StateE11Led_State_t18MGPIO_PIN_NUMBER_t))
-<BR><BR>[Stack]<UL><LI>Max Depth = 36<LI>Call Chain = led::set_Led_State(Led_State_t, MGPIO_PIN_NUMBER_t) &rArr; MGPIO::MGPIO_SetPin(MGPIO_PinConfig*, MGPIO_PIN_STATE_t)
+<P><STRONG><a name="[7e]"></a>led::LED_ToggleLed(MGPIO_PIN_NUMBER_t)</STRONG> (Thumb, 96 bytes, Stack size 24 bytes, led.o(.text._ZN3led13LED_ToggleLedE18MGPIO_PIN_NUMBER_t))
+<BR><BR>[Stack]<UL><LI>Max Depth = 36<LI>Call Chain = led::LED_ToggleLed(MGPIO_PIN_NUMBER_t) &rArr; MGPIO::MGPIO_TogglePin(MGPIO_PinConfig*)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MGPIO::MGPIO_SetPin(MGPIO_PinConfig*, MGPIO_PIN_STATE_t)
+<BR>[Calls]<UL><LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MGPIO::MGPIO_TogglePin(MGPIO_PinConfig*)
 </UL>
 <BR>[Called By]<UL><LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
@@ -706,18 +706,18 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MGPIO::MGPIO_InitPin(MGPIO_PinConfig*)
 </UL>
 
-<P><STRONG><a name="[7f]"></a>MGPIO::MGPIO_SetPin(MGPIO_PinConfig*, MGPIO_PIN_STATE_t)</STRONG> (Thumb, 124 bytes, Stack size 12 bytes, gpio.o(.text._ZN5MGPIO12MGPIO_SetPinEP15MGPIO_PinConfig17MGPIO_PIN_STATE_t))
-<BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = MGPIO::MGPIO_SetPin(MGPIO_PinConfig*, MGPIO_PIN_STATE_t)
-</UL>
-<BR>[Called By]<UL><LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;led::set_Led_State(Led_State_t, MGPIO_PIN_NUMBER_t)
-</UL>
-
 <P><STRONG><a name="[81]"></a>MGPIO::MGPIO_InitPin(MGPIO_PinConfig*)</STRONG> (Thumb, 1284 bytes, Stack size 24 bytes, gpio.o(.text._ZN5MGPIO13MGPIO_InitPinEP15MGPIO_PinConfig))
 <BR><BR>[Stack]<UL><LI>Max Depth = 28<LI>Call Chain = MGPIO::MGPIO_InitPin(MGPIO_PinConfig*) &rArr; MRCC::MRCC_GPIO_EnableClock(MRCC_GPIO_PORTS_t)
 </UL>
 <BR>[Calls]<UL><LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MRCC::MRCC_GPIO_EnableClock(MRCC_GPIO_PORTS_t)
 </UL>
 <BR>[Called By]<UL><LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;led::led()
+</UL>
+
+<P><STRONG><a name="[7f]"></a>MGPIO::MGPIO_TogglePin(MGPIO_PinConfig*)</STRONG> (Thumb, 68 bytes, Stack size 12 bytes, gpio.o(.text._ZN5MGPIO15MGPIO_TogglePinEP15MGPIO_PinConfig))
+<BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = MGPIO::MGPIO_TogglePin(MGPIO_PinConfig*)
+</UL>
+<BR>[Called By]<UL><LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;led::LED_ToggleLed(MGPIO_PIN_NUMBER_t)
 </UL>
 
 <P><STRONG><a name="[83]"></a>MGPIO::MGPIO()</STRONG> (Thumb, 10 bytes, Stack size 4 bytes, gpio.o(.text._ZN5MGPIOC2Ev))
@@ -728,10 +728,10 @@ Global Symbols
 
 <P><STRONG><a name="[b0]"></a>MGPIO::MGPIO__sub_object()</STRONG> (Thumb, 10 bytes, Stack size 4 bytes, gpio.o(.text._ZN5MGPIOC2Ev), UNUSED)
 
-<P><STRONG><a name="[75]"></a>main</STRONG> (Thumb, 34 bytes, Stack size 24 bytes, main.o(.text.main))
+<P><STRONG><a name="[75]"></a>main</STRONG> (Thumb, 58 bytes, Stack size 24 bytes, main.o(.text.main))
 <BR><BR>[Stack]<UL><LI>Max Depth = 76<LI>Call Chain = main &rArr; led::led() &rArr; MGPIO::MGPIO_InitPin(MGPIO_PinConfig*) &rArr; MRCC::MRCC_GPIO_EnableClock(MRCC_GPIO_PORTS_t)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;led::set_Led_State(Led_State_t, MGPIO_PIN_NUMBER_t)
+<BR>[Calls]<UL><LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;led::LED_ToggleLed(MGPIO_PIN_NUMBER_t)
 <LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;led::led()
 </UL>
 <BR>[Called By]<UL><LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_entry_main

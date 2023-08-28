@@ -14,7 +14,7 @@ Section Cross References
     rcc.o(.ARM.exidx.text._ZN4MRCCD2Ev) refers to rcc.o(.text._ZN4MRCCD2Ev) for [Anonymous Symbol]
     rcc.o(.ARM.exidx.text._ZN4MRCC21MRCC_GPIO_EnableClockE17MRCC_GPIO_PORTS_t) refers to rcc.o(.text._ZN4MRCC21MRCC_GPIO_EnableClockE17MRCC_GPIO_PORTS_t) for [Anonymous Symbol]
     main.o(.text.main) refers to led.o(.text._ZN3ledC2Ev) for led::led()
-    main.o(.text.main) refers to led.o(.text._ZN3led13set_Led_StateE11Led_State_t18MGPIO_PIN_NUMBER_t) for led::set_Led_State(Led_State_t, MGPIO_PIN_NUMBER_t)
+    main.o(.text.main) refers to led.o(.text._ZN3led13LED_ToggleLedE18MGPIO_PIN_NUMBER_t) for led::LED_ToggleLed(MGPIO_PIN_NUMBER_t)
     main.o(.ARM.exidx.text.main) refers to main.o(.text.main) for [Anonymous Symbol]
     led.o(.text.__cxx_global_var_init) refers to led.o(.bss.gpio_object) for gpio_object
     led.o(.text.__cxx_global_var_init) refers to gpio.o(.text._ZN5MGPIOC2Ev) for MGPIO::MGPIO()
@@ -23,14 +23,18 @@ Section Cross References
     led.o(.text._ZN3ledC2Ev) refers to led_cfg.o(.data.LED_Config) for LED_Config
     led.o(.text._ZN3ledC2Ev) refers to gpio.o(.text._ZN5MGPIO13MGPIO_InitPinEP15MGPIO_PinConfig) for MGPIO::MGPIO_InitPin(MGPIO_PinConfig*)
     led.o(.ARM.exidx.text._ZN3ledC2Ev) refers to led.o(.text._ZN3ledC2Ev) for [Anonymous Symbol]
-    led.o(.text._ZN3led13set_Led_StateE11Led_State_t18MGPIO_PIN_NUMBER_t) refers to led_cfg.o(.data.LED_Config) for LED_Config
-    led.o(.text._ZN3led13set_Led_StateE11Led_State_t18MGPIO_PIN_NUMBER_t) refers to led.o(.bss.gpio_object) for gpio_object
-    led.o(.text._ZN3led13set_Led_StateE11Led_State_t18MGPIO_PIN_NUMBER_t) refers to gpio.o(.text._ZN5MGPIO12MGPIO_SetPinEP15MGPIO_PinConfig17MGPIO_PIN_STATE_t) for MGPIO::MGPIO_SetPin(MGPIO_PinConfig*, MGPIO_PIN_STATE_t)
-    led.o(.ARM.exidx.text._ZN3led13set_Led_StateE11Led_State_t18MGPIO_PIN_NUMBER_t) refers to led.o(.text._ZN3led13set_Led_StateE11Led_State_t18MGPIO_PIN_NUMBER_t) for [Anonymous Symbol]
-    led.o(.text._ZN3led13get_Led_StateE18MGPIO_PIN_NUMBER_t) refers to led_cfg.o(.data.LED_Config) for LED_Config
-    led.o(.text._ZN3led13get_Led_StateE18MGPIO_PIN_NUMBER_t) refers to led.o(.bss.gpio_object) for gpio_object
-    led.o(.text._ZN3led13get_Led_StateE18MGPIO_PIN_NUMBER_t) refers to gpio.o(.text._ZN5MGPIO12MGPIO_GetPinEP15MGPIO_PinConfig) for MGPIO::MGPIO_GetPin(MGPIO_PinConfig*)
-    led.o(.ARM.exidx.text._ZN3led13get_Led_StateE18MGPIO_PIN_NUMBER_t) refers to led.o(.text._ZN3led13get_Led_StateE18MGPIO_PIN_NUMBER_t) for [Anonymous Symbol]
+    led.o(.text._ZN3led17LED_set_Led_StateE11Led_State_t18MGPIO_PIN_NUMBER_t) refers to led_cfg.o(.data.LED_Config) for LED_Config
+    led.o(.text._ZN3led17LED_set_Led_StateE11Led_State_t18MGPIO_PIN_NUMBER_t) refers to led.o(.bss.gpio_object) for gpio_object
+    led.o(.text._ZN3led17LED_set_Led_StateE11Led_State_t18MGPIO_PIN_NUMBER_t) refers to gpio.o(.text._ZN5MGPIO12MGPIO_SetPinEP15MGPIO_PinConfig17MGPIO_PIN_STATE_t) for MGPIO::MGPIO_SetPin(MGPIO_PinConfig*, MGPIO_PIN_STATE_t)
+    led.o(.ARM.exidx.text._ZN3led17LED_set_Led_StateE11Led_State_t18MGPIO_PIN_NUMBER_t) refers to led.o(.text._ZN3led17LED_set_Led_StateE11Led_State_t18MGPIO_PIN_NUMBER_t) for [Anonymous Symbol]
+    led.o(.text._ZN3led17LED_get_Led_StateE18MGPIO_PIN_NUMBER_t) refers to led_cfg.o(.data.LED_Config) for LED_Config
+    led.o(.text._ZN3led17LED_get_Led_StateE18MGPIO_PIN_NUMBER_t) refers to led.o(.bss.gpio_object) for gpio_object
+    led.o(.text._ZN3led17LED_get_Led_StateE18MGPIO_PIN_NUMBER_t) refers to gpio.o(.text._ZN5MGPIO12MGPIO_GetPinEP15MGPIO_PinConfig) for MGPIO::MGPIO_GetPin(MGPIO_PinConfig*)
+    led.o(.ARM.exidx.text._ZN3led17LED_get_Led_StateE18MGPIO_PIN_NUMBER_t) refers to led.o(.text._ZN3led17LED_get_Led_StateE18MGPIO_PIN_NUMBER_t) for [Anonymous Symbol]
+    led.o(.text._ZN3led13LED_ToggleLedE18MGPIO_PIN_NUMBER_t) refers to led_cfg.o(.data.LED_Config) for LED_Config
+    led.o(.text._ZN3led13LED_ToggleLedE18MGPIO_PIN_NUMBER_t) refers to led.o(.bss.gpio_object) for gpio_object
+    led.o(.text._ZN3led13LED_ToggleLedE18MGPIO_PIN_NUMBER_t) refers to gpio.o(.text._ZN5MGPIO15MGPIO_TogglePinEP15MGPIO_PinConfig) for MGPIO::MGPIO_TogglePin(MGPIO_PinConfig*)
+    led.o(.ARM.exidx.text._ZN3led13LED_ToggleLedE18MGPIO_PIN_NUMBER_t) refers to led.o(.text._ZN3led13LED_ToggleLedE18MGPIO_PIN_NUMBER_t) for [Anonymous Symbol]
     led.o(.text._GLOBAL__sub_I_LED.cpp) refers to led.o(.text.__cxx_global_var_init) for __cxx_global_var_init
     led.o(.ARM.exidx.text._GLOBAL__sub_I_LED.cpp) refers to led.o(.text._GLOBAL__sub_I_LED.cpp) for [Anonymous Symbol]
     led.o(.init_array) refers to led.o(.text._GLOBAL__sub_I_LED.cpp) for _GLOBAL__sub_I_LED.cpp
@@ -170,10 +174,10 @@ Removing Unused input sections from the image.
     Removing gpio.o(.text), (0 bytes).
     Removing gpio.o(.ARM.exidx.text._ZN5MGPIOC2Ev), (8 bytes).
     Removing gpio.o(.ARM.exidx.text._ZN5MGPIO13MGPIO_InitPinEP15MGPIO_PinConfig), (8 bytes).
+    Removing gpio.o(.text._ZN5MGPIO12MGPIO_SetPinEP15MGPIO_PinConfig17MGPIO_PIN_STATE_t), (124 bytes).
     Removing gpio.o(.ARM.exidx.text._ZN5MGPIO12MGPIO_SetPinEP15MGPIO_PinConfig17MGPIO_PIN_STATE_t), (8 bytes).
     Removing gpio.o(.text._ZN5MGPIO12MGPIO_GetPinEP15MGPIO_PinConfig), (56 bytes).
     Removing gpio.o(.ARM.exidx.text._ZN5MGPIO12MGPIO_GetPinEP15MGPIO_PinConfig), (8 bytes).
-    Removing gpio.o(.text._ZN5MGPIO15MGPIO_TogglePinEP15MGPIO_PinConfig), (68 bytes).
     Removing gpio.o(.ARM.exidx.text._ZN5MGPIO15MGPIO_TogglePinEP15MGPIO_PinConfig), (8 bytes).
     Removing rcc.o(.text), (0 bytes).
     Removing rcc.o(.text._ZN4MRCCC2Ev), (14 bytes).
@@ -187,9 +191,11 @@ Removing Unused input sections from the image.
     Removing led.o(.text), (0 bytes).
     Removing led.o(.ARM.exidx.text.__cxx_global_var_init), (8 bytes).
     Removing led.o(.ARM.exidx.text._ZN3ledC2Ev), (8 bytes).
-    Removing led.o(.ARM.exidx.text._ZN3led13set_Led_StateE11Led_State_t18MGPIO_PIN_NUMBER_t), (8 bytes).
-    Removing led.o(.text._ZN3led13get_Led_StateE18MGPIO_PIN_NUMBER_t), (104 bytes).
-    Removing led.o(.ARM.exidx.text._ZN3led13get_Led_StateE18MGPIO_PIN_NUMBER_t), (8 bytes).
+    Removing led.o(.text._ZN3led17LED_set_Led_StateE11Led_State_t18MGPIO_PIN_NUMBER_t), (212 bytes).
+    Removing led.o(.ARM.exidx.text._ZN3led17LED_set_Led_StateE11Led_State_t18MGPIO_PIN_NUMBER_t), (8 bytes).
+    Removing led.o(.text._ZN3led17LED_get_Led_StateE18MGPIO_PIN_NUMBER_t), (104 bytes).
+    Removing led.o(.ARM.exidx.text._ZN3led17LED_get_Led_StateE18MGPIO_PIN_NUMBER_t), (8 bytes).
+    Removing led.o(.ARM.exidx.text._ZN3led13LED_ToggleLedE18MGPIO_PIN_NUMBER_t), (8 bytes).
     Removing led.o(.ARM.exidx.text._GLOBAL__sub_I_LED.cpp), (8 bytes).
     Removing led_cfg.o(.text), (0 bytes).
     Removing system_stm32f4xx.o(.text), (0 bytes).
@@ -200,7 +206,7 @@ Removing Unused input sections from the image.
     Removing system_stm32f4xx.o(.rodata.AHBPrescTable), (16 bytes).
     Removing system_stm32f4xx.o(.rodata.APBPrescTable), (8 bytes).
 
-32 unused section(s) (total 718 bytes) removed from the image.
+34 unused section(s) (total 994 bytes) removed from the image.
 
 ==============================================================================
 
@@ -334,18 +340,18 @@ Image Symbol Table
     [Anonymous Symbol]                       0x08000330   Section        0  system_stm32f4xx.o(.text.SystemInit)
     _GLOBAL__sub_I_LED.cpp                   0x08000345   Thumb Code     8  led.o(.text._GLOBAL__sub_I_LED.cpp)
     [Anonymous Symbol]                       0x08000344   Section        0  led.o(.text._GLOBAL__sub_I_LED.cpp)
-    [Anonymous Symbol]                       0x0800034c   Section        0  led.o(.text._ZN3led13set_Led_StateE11Led_State_t18MGPIO_PIN_NUMBER_t)
-    [Anonymous Symbol]                       0x08000420   Section        0  led.o(.text._ZN3ledC2Ev)
-    [Anonymous Symbol]                       0x08000464   Section        0  rcc.o(.text._ZN4MRCC21MRCC_GPIO_EnableClockE17MRCC_GPIO_PORTS_t)
-    [Anonymous Symbol]                       0x080004b0   Section        0  gpio.o(.text._ZN5MGPIO12MGPIO_SetPinEP15MGPIO_PinConfig17MGPIO_PIN_STATE_t)
-    [Anonymous Symbol]                       0x0800052c   Section        0  gpio.o(.text._ZN5MGPIO13MGPIO_InitPinEP15MGPIO_PinConfig)
-    [Anonymous Symbol]                       0x08000a30   Section        0  gpio.o(.text._ZN5MGPIOC2Ev)
-    __cxx_global_var_init                    0x08000a3d   Thumb Code    52  led.o(.text.__cxx_global_var_init)
-    [Anonymous Symbol]                       0x08000a3c   Section        0  led.o(.text.__cxx_global_var_init)
-    [Anonymous Symbol]                       0x08000a70   Section        0  main.o(.text.main)
-    $v0                                      0x08000a92   Number         0  fpinit.o(x$fpl$fpinit)
-    x$fpl$fpinit                             0x08000a92   Section       26  fpinit.o(x$fpl$fpinit)
-    .init_array                              0x08000ad0   Section        0  init_aeabi.o(.init_array)
+    [Anonymous Symbol]                       0x0800034c   Section        0  led.o(.text._ZN3led13LED_ToggleLedE18MGPIO_PIN_NUMBER_t)
+    [Anonymous Symbol]                       0x080003ac   Section        0  led.o(.text._ZN3ledC2Ev)
+    [Anonymous Symbol]                       0x080003f0   Section        0  rcc.o(.text._ZN4MRCC21MRCC_GPIO_EnableClockE17MRCC_GPIO_PORTS_t)
+    [Anonymous Symbol]                       0x0800043c   Section        0  gpio.o(.text._ZN5MGPIO13MGPIO_InitPinEP15MGPIO_PinConfig)
+    [Anonymous Symbol]                       0x08000940   Section        0  gpio.o(.text._ZN5MGPIO15MGPIO_TogglePinEP15MGPIO_PinConfig)
+    [Anonymous Symbol]                       0x08000984   Section        0  gpio.o(.text._ZN5MGPIOC2Ev)
+    __cxx_global_var_init                    0x08000991   Thumb Code    52  led.o(.text.__cxx_global_var_init)
+    [Anonymous Symbol]                       0x08000990   Section        0  led.o(.text.__cxx_global_var_init)
+    [Anonymous Symbol]                       0x080009c4   Section        0  main.o(.text.main)
+    $v0                                      0x080009fe   Number         0  fpinit.o(x$fpl$fpinit)
+    x$fpl$fpinit                             0x080009fe   Section       26  fpinit.o(x$fpl$fpinit)
+    .init_array                              0x08000a3c   Section        0  init_aeabi.o(.init_array)
     .bss                                     0x20000018   Section       96  libspace.o(.bss)
     Heap_Mem                                 0x20000080   Data         512  startup_stm32f429xx.o(HEAP)
     HEAP                                     0x20000080   Section      512  startup_stm32f429xx.o(HEAP)
@@ -554,22 +560,22 @@ Image Symbol Table
     __semihosting_library_function           0x08000323   Thumb Code     0  indicate_semi.o(.text)
     _sys_exit                                0x08000325   Thumb Code     8  sys_exit.o(.text)
     SystemInit                               0x08000331   Thumb Code    18  system_stm32f4xx.o(.text.SystemInit)
-    led::set_Led_State(Led_State_t, MGPIO_PIN_NUMBER_t) 0x0800034d   Thumb Code   212  led.o(.text._ZN3led13set_Led_StateE11Led_State_t18MGPIO_PIN_NUMBER_t)
-    led::led()                               0x08000421   Thumb Code    68  led.o(.text._ZN3ledC2Ev)
-    led::led__sub_object()                   0x08000421   Thumb Code    68  led.o(.text._ZN3ledC2Ev)
-    MRCC::MRCC_GPIO_EnableClock(MRCC_GPIO_PORTS_t) 0x08000465   Thumb Code    74  rcc.o(.text._ZN4MRCC21MRCC_GPIO_EnableClockE17MRCC_GPIO_PORTS_t)
-    MGPIO::MGPIO_SetPin(MGPIO_PinConfig*, MGPIO_PIN_STATE_t) 0x080004b1   Thumb Code   124  gpio.o(.text._ZN5MGPIO12MGPIO_SetPinEP15MGPIO_PinConfig17MGPIO_PIN_STATE_t)
-    MGPIO::MGPIO_InitPin(MGPIO_PinConfig*)   0x0800052d   Thumb Code  1284  gpio.o(.text._ZN5MGPIO13MGPIO_InitPinEP15MGPIO_PinConfig)
-    MGPIO::MGPIO()                           0x08000a31   Thumb Code    10  gpio.o(.text._ZN5MGPIOC2Ev)
-    MGPIO::MGPIO__sub_object()               0x08000a31   Thumb Code    10  gpio.o(.text._ZN5MGPIOC2Ev)
-    main                                     0x08000a71   Thumb Code    34  main.o(.text.main)
-    _fp_init                                 0x08000a93   Thumb Code    26  fpinit.o(x$fpl$fpinit)
-    __fplib_config_fpu_vfp                   0x08000aab   Thumb Code     0  fpinit.o(x$fpl$fpinit)
-    __fplib_config_pureend_doubles           0x08000aab   Thumb Code     0  fpinit.o(x$fpl$fpinit)
-    Region$$Table$$Base                      0x08000aac   Number         0  anon$$obj.o(Region$$Table)
-    Region$$Table$$Limit                     0x08000acc   Number         0  anon$$obj.o(Region$$Table)
-    SHT$$INIT_ARRAY$$Base                    0x08000acc   Number         0  led.o(.init_array)
-    SHT$$INIT_ARRAY$$Limit                   0x08000ad0   Number         0  init_aeabi.o(.init_array)
+    led::LED_ToggleLed(MGPIO_PIN_NUMBER_t)   0x0800034d   Thumb Code    96  led.o(.text._ZN3led13LED_ToggleLedE18MGPIO_PIN_NUMBER_t)
+    led::led()                               0x080003ad   Thumb Code    68  led.o(.text._ZN3ledC2Ev)
+    led::led__sub_object()                   0x080003ad   Thumb Code    68  led.o(.text._ZN3ledC2Ev)
+    MRCC::MRCC_GPIO_EnableClock(MRCC_GPIO_PORTS_t) 0x080003f1   Thumb Code    74  rcc.o(.text._ZN4MRCC21MRCC_GPIO_EnableClockE17MRCC_GPIO_PORTS_t)
+    MGPIO::MGPIO_InitPin(MGPIO_PinConfig*)   0x0800043d   Thumb Code  1284  gpio.o(.text._ZN5MGPIO13MGPIO_InitPinEP15MGPIO_PinConfig)
+    MGPIO::MGPIO_TogglePin(MGPIO_PinConfig*) 0x08000941   Thumb Code    68  gpio.o(.text._ZN5MGPIO15MGPIO_TogglePinEP15MGPIO_PinConfig)
+    MGPIO::MGPIO()                           0x08000985   Thumb Code    10  gpio.o(.text._ZN5MGPIOC2Ev)
+    MGPIO::MGPIO__sub_object()               0x08000985   Thumb Code    10  gpio.o(.text._ZN5MGPIOC2Ev)
+    main                                     0x080009c5   Thumb Code    58  main.o(.text.main)
+    _fp_init                                 0x080009ff   Thumb Code    26  fpinit.o(x$fpl$fpinit)
+    __fplib_config_fpu_vfp                   0x08000a17   Thumb Code     0  fpinit.o(x$fpl$fpinit)
+    __fplib_config_pureend_doubles           0x08000a17   Thumb Code     0  fpinit.o(x$fpl$fpinit)
+    Region$$Table$$Base                      0x08000a18   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x08000a38   Number         0  anon$$obj.o(Region$$Table)
+    SHT$$INIT_ARRAY$$Base                    0x08000a38   Number         0  led.o(.init_array)
+    SHT$$INIT_ARRAY$$Limit                   0x08000a3c   Number         0  init_aeabi.o(.init_array)
     LED_Config                               0x20000000   Data          24  led_cfg.o(.data.LED_Config)
     __libspace_start                         0x20000018   Data          96  libspace.o(.bss)
     __temporary_stack_top$libspace           0x20000078   Data           0  libspace.o(.bss)
@@ -583,108 +589,108 @@ Memory Map of the image
 
   Image Entry point : 0x08000251
 
-  Load Region LR_1 (Base: 0x08000000, Size: 0x00000ae8, Max: 0xffffffff, ABSOLUTE)
+  Load Region LR_1 (Base: 0x08000000, Size: 0x00000a54, Max: 0xffffffff, ABSOLUTE)
 
-    Execution Region ER_RO (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x00000ad0, Max: 0xffffffff, ABSOLUTE)
+    Execution Region ER_RO (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x00000a3c, Max: 0xffffffff, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x08000000   0x08000000   0x000001ac   Data   RO           67    RESET               startup_stm32f429xx.o
-    0x080001ac   0x080001ac   0x00000008   Code   RO           92  * !!!main             c_w.l(__main.o)
-    0x080001b4   0x080001b4   0x00000034   Code   RO          267    !!!scatter          c_w.l(__scatter.o)
-    0x080001e8   0x080001e8   0x0000001a   Code   RO          269    !!handler_copy      c_w.l(__scatter_copy.o)
+    0x08000000   0x08000000   0x000001ac   Data   RO           69    RESET               startup_stm32f429xx.o
+    0x080001ac   0x080001ac   0x00000008   Code   RO           94  * !!!main             c_w.l(__main.o)
+    0x080001b4   0x080001b4   0x00000034   Code   RO          269    !!!scatter          c_w.l(__scatter.o)
+    0x080001e8   0x080001e8   0x0000001a   Code   RO          271    !!handler_copy      c_w.l(__scatter_copy.o)
     0x08000202   0x08000202   0x00000002   PAD
-    0x08000204   0x08000204   0x0000001c   Code   RO          271    !!handler_zi        c_w.l(__scatter_zi.o)
-    0x08000220   0x08000220   0x00000002   Code   RO          184    .ARM.Collect$$libinit$$00000000  c_w.l(libinit.o)
-    0x08000222   0x08000222   0x00000004   Code   RO          101    .ARM.Collect$$libinit$$00000001  c_w.l(libinit2.o)
-    0x08000226   0x08000226   0x00000000   Code   RO          104    .ARM.Collect$$libinit$$00000004  c_w.l(libinit2.o)
-    0x08000226   0x08000226   0x00000000   Code   RO          106    .ARM.Collect$$libinit$$00000006  c_w.l(libinit2.o)
-    0x08000226   0x08000226   0x00000000   Code   RO          109    .ARM.Collect$$libinit$$0000000C  c_w.l(libinit2.o)
-    0x08000226   0x08000226   0x00000000   Code   RO          111    .ARM.Collect$$libinit$$0000000E  c_w.l(libinit2.o)
-    0x08000226   0x08000226   0x00000000   Code   RO          113    .ARM.Collect$$libinit$$00000010  c_w.l(libinit2.o)
-    0x08000226   0x08000226   0x00000000   Code   RO          116    .ARM.Collect$$libinit$$00000013  c_w.l(libinit2.o)
-    0x08000226   0x08000226   0x00000000   Code   RO          118    .ARM.Collect$$libinit$$00000015  c_w.l(libinit2.o)
-    0x08000226   0x08000226   0x00000000   Code   RO          120    .ARM.Collect$$libinit$$00000017  c_w.l(libinit2.o)
-    0x08000226   0x08000226   0x00000000   Code   RO          122    .ARM.Collect$$libinit$$00000019  c_w.l(libinit2.o)
-    0x08000226   0x08000226   0x00000000   Code   RO          124    .ARM.Collect$$libinit$$0000001B  c_w.l(libinit2.o)
-    0x08000226   0x08000226   0x00000000   Code   RO          126    .ARM.Collect$$libinit$$0000001D  c_w.l(libinit2.o)
-    0x08000226   0x08000226   0x00000000   Code   RO          128    .ARM.Collect$$libinit$$0000001F  c_w.l(libinit2.o)
-    0x08000226   0x08000226   0x00000000   Code   RO          130    .ARM.Collect$$libinit$$00000021  c_w.l(libinit2.o)
-    0x08000226   0x08000226   0x00000000   Code   RO          132    .ARM.Collect$$libinit$$00000023  c_w.l(libinit2.o)
-    0x08000226   0x08000226   0x00000000   Code   RO          134    .ARM.Collect$$libinit$$00000025  c_w.l(libinit2.o)
-    0x08000226   0x08000226   0x00000000   Code   RO          136    .ARM.Collect$$libinit$$00000027  c_w.l(libinit2.o)
-    0x08000226   0x08000226   0x00000000   Code   RO          140    .ARM.Collect$$libinit$$0000002E  c_w.l(libinit2.o)
-    0x08000226   0x08000226   0x00000000   Code   RO          142    .ARM.Collect$$libinit$$00000030  c_w.l(libinit2.o)
-    0x08000226   0x08000226   0x00000000   Code   RO          144    .ARM.Collect$$libinit$$00000032  c_w.l(libinit2.o)
-    0x08000226   0x08000226   0x00000004   Code   RO          145    .ARM.Collect$$libinit$$00000033  c_w.l(libinit2.o)
-    0x0800022a   0x0800022a   0x00000000   Code   RO          146    .ARM.Collect$$libinit$$00000034  c_w.l(libinit2.o)
-    0x0800022a   0x0800022a   0x00000002   Code   RO          147    .ARM.Collect$$libinit$$00000035  c_w.l(libinit2.o)
-    0x0800022c   0x0800022c   0x00000002   Code   RO          226    .ARM.Collect$$libshutdown$$00000000  c_w.l(libshutdown.o)
-    0x0800022e   0x0800022e   0x00000000   Code   RO          234    .ARM.Collect$$libshutdown$$00000002  c_w.l(libshutdown2.o)
-    0x0800022e   0x0800022e   0x00000000   Code   RO          236    .ARM.Collect$$libshutdown$$00000004  c_w.l(libshutdown2.o)
-    0x0800022e   0x0800022e   0x00000000   Code   RO          239    .ARM.Collect$$libshutdown$$00000007  c_w.l(libshutdown2.o)
-    0x0800022e   0x0800022e   0x00000000   Code   RO          242    .ARM.Collect$$libshutdown$$0000000A  c_w.l(libshutdown2.o)
-    0x0800022e   0x0800022e   0x00000000   Code   RO          244    .ARM.Collect$$libshutdown$$0000000C  c_w.l(libshutdown2.o)
-    0x0800022e   0x0800022e   0x00000000   Code   RO          247    .ARM.Collect$$libshutdown$$0000000F  c_w.l(libshutdown2.o)
-    0x0800022e   0x0800022e   0x00000002   Code   RO          248    .ARM.Collect$$libshutdown$$00000010  c_w.l(libshutdown2.o)
-    0x08000230   0x08000230   0x00000000   Code   RO          100    .ARM.Collect$$rtentry$$00000000  c_w.l(__rtentry.o)
-    0x08000230   0x08000230   0x00000000   Code   RO          153    .ARM.Collect$$rtentry$$00000002  c_w.l(__rtentry2.o)
-    0x08000230   0x08000230   0x00000006   Code   RO          165    .ARM.Collect$$rtentry$$00000004  c_w.l(__rtentry4.o)
-    0x08000236   0x08000236   0x00000000   Code   RO          155    .ARM.Collect$$rtentry$$00000009  c_w.l(__rtentry2.o)
-    0x08000236   0x08000236   0x00000004   Code   RO          156    .ARM.Collect$$rtentry$$0000000A  c_w.l(__rtentry2.o)
-    0x0800023a   0x0800023a   0x00000000   Code   RO          158    .ARM.Collect$$rtentry$$0000000C  c_w.l(__rtentry2.o)
-    0x0800023a   0x0800023a   0x00000008   Code   RO          159    .ARM.Collect$$rtentry$$0000000D  c_w.l(__rtentry2.o)
-    0x08000242   0x08000242   0x00000002   Code   RO          192    .ARM.Collect$$rtexit$$00000000  c_w.l(rtexit.o)
-    0x08000244   0x08000244   0x00000000   Code   RO          204    .ARM.Collect$$rtexit$$00000002  c_w.l(rtexit2.o)
-    0x08000244   0x08000244   0x00000004   Code   RO          205    .ARM.Collect$$rtexit$$00000003  c_w.l(rtexit2.o)
-    0x08000248   0x08000248   0x00000006   Code   RO          206    .ARM.Collect$$rtexit$$00000004  c_w.l(rtexit2.o)
+    0x08000204   0x08000204   0x0000001c   Code   RO          273    !!handler_zi        c_w.l(__scatter_zi.o)
+    0x08000220   0x08000220   0x00000002   Code   RO          186    .ARM.Collect$$libinit$$00000000  c_w.l(libinit.o)
+    0x08000222   0x08000222   0x00000004   Code   RO          103    .ARM.Collect$$libinit$$00000001  c_w.l(libinit2.o)
+    0x08000226   0x08000226   0x00000000   Code   RO          106    .ARM.Collect$$libinit$$00000004  c_w.l(libinit2.o)
+    0x08000226   0x08000226   0x00000000   Code   RO          108    .ARM.Collect$$libinit$$00000006  c_w.l(libinit2.o)
+    0x08000226   0x08000226   0x00000000   Code   RO          111    .ARM.Collect$$libinit$$0000000C  c_w.l(libinit2.o)
+    0x08000226   0x08000226   0x00000000   Code   RO          113    .ARM.Collect$$libinit$$0000000E  c_w.l(libinit2.o)
+    0x08000226   0x08000226   0x00000000   Code   RO          115    .ARM.Collect$$libinit$$00000010  c_w.l(libinit2.o)
+    0x08000226   0x08000226   0x00000000   Code   RO          118    .ARM.Collect$$libinit$$00000013  c_w.l(libinit2.o)
+    0x08000226   0x08000226   0x00000000   Code   RO          120    .ARM.Collect$$libinit$$00000015  c_w.l(libinit2.o)
+    0x08000226   0x08000226   0x00000000   Code   RO          122    .ARM.Collect$$libinit$$00000017  c_w.l(libinit2.o)
+    0x08000226   0x08000226   0x00000000   Code   RO          124    .ARM.Collect$$libinit$$00000019  c_w.l(libinit2.o)
+    0x08000226   0x08000226   0x00000000   Code   RO          126    .ARM.Collect$$libinit$$0000001B  c_w.l(libinit2.o)
+    0x08000226   0x08000226   0x00000000   Code   RO          128    .ARM.Collect$$libinit$$0000001D  c_w.l(libinit2.o)
+    0x08000226   0x08000226   0x00000000   Code   RO          130    .ARM.Collect$$libinit$$0000001F  c_w.l(libinit2.o)
+    0x08000226   0x08000226   0x00000000   Code   RO          132    .ARM.Collect$$libinit$$00000021  c_w.l(libinit2.o)
+    0x08000226   0x08000226   0x00000000   Code   RO          134    .ARM.Collect$$libinit$$00000023  c_w.l(libinit2.o)
+    0x08000226   0x08000226   0x00000000   Code   RO          136    .ARM.Collect$$libinit$$00000025  c_w.l(libinit2.o)
+    0x08000226   0x08000226   0x00000000   Code   RO          138    .ARM.Collect$$libinit$$00000027  c_w.l(libinit2.o)
+    0x08000226   0x08000226   0x00000000   Code   RO          142    .ARM.Collect$$libinit$$0000002E  c_w.l(libinit2.o)
+    0x08000226   0x08000226   0x00000000   Code   RO          144    .ARM.Collect$$libinit$$00000030  c_w.l(libinit2.o)
+    0x08000226   0x08000226   0x00000000   Code   RO          146    .ARM.Collect$$libinit$$00000032  c_w.l(libinit2.o)
+    0x08000226   0x08000226   0x00000004   Code   RO          147    .ARM.Collect$$libinit$$00000033  c_w.l(libinit2.o)
+    0x0800022a   0x0800022a   0x00000000   Code   RO          148    .ARM.Collect$$libinit$$00000034  c_w.l(libinit2.o)
+    0x0800022a   0x0800022a   0x00000002   Code   RO          149    .ARM.Collect$$libinit$$00000035  c_w.l(libinit2.o)
+    0x0800022c   0x0800022c   0x00000002   Code   RO          228    .ARM.Collect$$libshutdown$$00000000  c_w.l(libshutdown.o)
+    0x0800022e   0x0800022e   0x00000000   Code   RO          236    .ARM.Collect$$libshutdown$$00000002  c_w.l(libshutdown2.o)
+    0x0800022e   0x0800022e   0x00000000   Code   RO          238    .ARM.Collect$$libshutdown$$00000004  c_w.l(libshutdown2.o)
+    0x0800022e   0x0800022e   0x00000000   Code   RO          241    .ARM.Collect$$libshutdown$$00000007  c_w.l(libshutdown2.o)
+    0x0800022e   0x0800022e   0x00000000   Code   RO          244    .ARM.Collect$$libshutdown$$0000000A  c_w.l(libshutdown2.o)
+    0x0800022e   0x0800022e   0x00000000   Code   RO          246    .ARM.Collect$$libshutdown$$0000000C  c_w.l(libshutdown2.o)
+    0x0800022e   0x0800022e   0x00000000   Code   RO          249    .ARM.Collect$$libshutdown$$0000000F  c_w.l(libshutdown2.o)
+    0x0800022e   0x0800022e   0x00000002   Code   RO          250    .ARM.Collect$$libshutdown$$00000010  c_w.l(libshutdown2.o)
+    0x08000230   0x08000230   0x00000000   Code   RO          102    .ARM.Collect$$rtentry$$00000000  c_w.l(__rtentry.o)
+    0x08000230   0x08000230   0x00000000   Code   RO          155    .ARM.Collect$$rtentry$$00000002  c_w.l(__rtentry2.o)
+    0x08000230   0x08000230   0x00000006   Code   RO          167    .ARM.Collect$$rtentry$$00000004  c_w.l(__rtentry4.o)
+    0x08000236   0x08000236   0x00000000   Code   RO          157    .ARM.Collect$$rtentry$$00000009  c_w.l(__rtentry2.o)
+    0x08000236   0x08000236   0x00000004   Code   RO          158    .ARM.Collect$$rtentry$$0000000A  c_w.l(__rtentry2.o)
+    0x0800023a   0x0800023a   0x00000000   Code   RO          160    .ARM.Collect$$rtentry$$0000000C  c_w.l(__rtentry2.o)
+    0x0800023a   0x0800023a   0x00000008   Code   RO          161    .ARM.Collect$$rtentry$$0000000D  c_w.l(__rtentry2.o)
+    0x08000242   0x08000242   0x00000002   Code   RO          194    .ARM.Collect$$rtexit$$00000000  c_w.l(rtexit.o)
+    0x08000244   0x08000244   0x00000000   Code   RO          206    .ARM.Collect$$rtexit$$00000002  c_w.l(rtexit2.o)
+    0x08000244   0x08000244   0x00000004   Code   RO          207    .ARM.Collect$$rtexit$$00000003  c_w.l(rtexit2.o)
+    0x08000248   0x08000248   0x00000006   Code   RO          208    .ARM.Collect$$rtexit$$00000004  c_w.l(rtexit2.o)
     0x0800024e   0x0800024e   0x00000002   PAD
-    0x08000250   0x08000250   0x00000040   Code   RO           68  * .text               startup_stm32f429xx.o
-    0x08000290   0x08000290   0x00000006   Code   RO           90    .text               c_w.l(heapauxi.o)
+    0x08000250   0x08000250   0x00000040   Code   RO           70  * .text               startup_stm32f429xx.o
+    0x08000290   0x08000290   0x00000006   Code   RO           92    .text               c_w.l(heapauxi.o)
     0x08000296   0x08000296   0x00000002   PAD
-    0x08000298   0x08000298   0x00000024   Code   RO           97    .text               c_w.l(init_aeabi.o)
-    0x080002bc   0x080002bc   0x0000004a   Code   RO          171    .text               c_w.l(sys_stackheap_outer.o)
-    0x08000306   0x08000306   0x00000012   Code   RO          173    .text               c_w.l(exit.o)
-    0x08000318   0x08000318   0x00000008   Code   RO          189    .text               c_w.l(libspace.o)
-    0x08000320   0x08000320   0x00000002   Code   RO          200    .text               c_w.l(use_no_semi.o)
-    0x08000322   0x08000322   0x00000000   Code   RO          202    .text               c_w.l(indicate_semi.o)
+    0x08000298   0x08000298   0x00000024   Code   RO           99    .text               c_w.l(init_aeabi.o)
+    0x080002bc   0x080002bc   0x0000004a   Code   RO          173    .text               c_w.l(sys_stackheap_outer.o)
+    0x08000306   0x08000306   0x00000012   Code   RO          175    .text               c_w.l(exit.o)
+    0x08000318   0x08000318   0x00000008   Code   RO          191    .text               c_w.l(libspace.o)
+    0x08000320   0x08000320   0x00000002   Code   RO          202    .text               c_w.l(use_no_semi.o)
+    0x08000322   0x08000322   0x00000000   Code   RO          204    .text               c_w.l(indicate_semi.o)
     0x08000322   0x08000322   0x00000002   PAD
-    0x08000324   0x08000324   0x0000000c   Code   RO          216    .text               c_w.l(sys_exit.o)
-    0x08000330   0x08000330   0x00000012   Code   RO           75    .text.SystemInit    system_stm32f4xx.o
+    0x08000324   0x08000324   0x0000000c   Code   RO          218    .text               c_w.l(sys_exit.o)
+    0x08000330   0x08000330   0x00000012   Code   RO           77    .text.SystemInit    system_stm32f4xx.o
     0x08000342   0x08000342   0x00000002   PAD
-    0x08000344   0x08000344   0x00000008   Code   RO           49    .text._GLOBAL__sub_I_LED.cpp  led.o
-    0x0800034c   0x0800034c   0x000000d4   Code   RO           45    .text._ZN3led13set_Led_StateE11Led_State_t18MGPIO_PIN_NUMBER_t  led.o
-    0x08000420   0x08000420   0x00000044   Code   RO           43    .text._ZN3ledC2Ev   led.o
-    0x08000464   0x08000464   0x0000004a   Code   RO           23    .text._ZN4MRCC21MRCC_GPIO_EnableClockE17MRCC_GPIO_PORTS_t  rcc.o
-    0x080004ae   0x080004ae   0x00000002   PAD
-    0x080004b0   0x080004b0   0x0000007c   Code   RO            6    .text._ZN5MGPIO12MGPIO_SetPinEP15MGPIO_PinConfig17MGPIO_PIN_STATE_t  gpio.o
-    0x0800052c   0x0800052c   0x00000504   Code   RO            4    .text._ZN5MGPIO13MGPIO_InitPinEP15MGPIO_PinConfig  gpio.o
-    0x08000a30   0x08000a30   0x0000000a   Code   RO            2    .text._ZN5MGPIOC2Ev  gpio.o
-    0x08000a3a   0x08000a3a   0x00000002   PAD
-    0x08000a3c   0x08000a3c   0x00000034   Code   RO           41    .text.__cxx_global_var_init  led.o
-    0x08000a70   0x08000a70   0x00000022   Code   RO           32    .text.main          main.o
-    0x08000a92   0x08000a92   0x0000001a   Code   RO          169    x$fpl$fpinit        fz_wm.l(fpinit.o)
-    0x08000aac   0x08000aac   0x00000020   Data   RO          266    Region$$Table       anon$$obj.o
-    0x08000acc   0x08000acc   0x00000004   Data   RO           52    .init_array         led.o
-    0x08000ad0   0x08000acc   0x00000000   Data   RO           95    .init_array         c_w.l(init_aeabi.o)
+    0x08000344   0x08000344   0x00000008   Code   RO           51    .text._GLOBAL__sub_I_LED.cpp  led.o
+    0x0800034c   0x0800034c   0x00000060   Code   RO           49    .text._ZN3led13LED_ToggleLedE18MGPIO_PIN_NUMBER_t  led.o
+    0x080003ac   0x080003ac   0x00000044   Code   RO           43    .text._ZN3ledC2Ev   led.o
+    0x080003f0   0x080003f0   0x0000004a   Code   RO           23    .text._ZN4MRCC21MRCC_GPIO_EnableClockE17MRCC_GPIO_PORTS_t  rcc.o
+    0x0800043a   0x0800043a   0x00000002   PAD
+    0x0800043c   0x0800043c   0x00000504   Code   RO            4    .text._ZN5MGPIO13MGPIO_InitPinEP15MGPIO_PinConfig  gpio.o
+    0x08000940   0x08000940   0x00000044   Code   RO           10    .text._ZN5MGPIO15MGPIO_TogglePinEP15MGPIO_PinConfig  gpio.o
+    0x08000984   0x08000984   0x0000000a   Code   RO            2    .text._ZN5MGPIOC2Ev  gpio.o
+    0x0800098e   0x0800098e   0x00000002   PAD
+    0x08000990   0x08000990   0x00000034   Code   RO           41    .text.__cxx_global_var_init  led.o
+    0x080009c4   0x080009c4   0x0000003a   Code   RO           32    .text.main          main.o
+    0x080009fe   0x080009fe   0x0000001a   Code   RO          171    x$fpl$fpinit        fz_wm.l(fpinit.o)
+    0x08000a18   0x08000a18   0x00000020   Data   RO          268    Region$$Table       anon$$obj.o
+    0x08000a38   0x08000a38   0x00000004   Data   RO           54    .init_array         led.o
+    0x08000a3c   0x08000a38   0x00000000   Data   RO           97    .init_array         c_w.l(init_aeabi.o)
 
 
-    Execution Region ER_RW (Exec base: 0x20000000, Load base: 0x08000ad0, Size: 0x00000018, Max: 0xffffffff, ABSOLUTE)
-
-    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
-
-    0x20000000   0x08000ad0   0x00000018   Data   RW           60    .data.LED_Config    led_cfg.o
-
-
-    Execution Region ER_ZI (Exec base: 0x20000018, Load base: 0x08000ae8, Size: 0x00000668, Max: 0xffffffff, ABSOLUTE)
+    Execution Region ER_RW (Exec base: 0x20000000, Load base: 0x08000a3c, Size: 0x00000018, Max: 0xffffffff, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x20000018        -       0x00000060   Zero   RW          190    .bss                c_w.l(libspace.o)
-    0x20000078        -       0x00000003   Zero   RW           51    .bss.gpio_object    led.o
-    0x2000007b   0x08000ae8   0x00000005   PAD
-    0x20000080        -       0x00000200   Zero   RW           66    HEAP                startup_stm32f429xx.o
-    0x20000280        -       0x00000400   Zero   RW           65    STACK               startup_stm32f429xx.o
+    0x20000000   0x08000a3c   0x00000018   Data   RW           62    .data.LED_Config    led_cfg.o
+
+
+    Execution Region ER_ZI (Exec base: 0x20000018, Load base: 0x08000a54, Size: 0x00000668, Max: 0xffffffff, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x20000018        -       0x00000060   Zero   RW          192    .bss                c_w.l(libspace.o)
+    0x20000078        -       0x00000003   Zero   RW           53    .bss.gpio_object    led.o
+    0x2000007b   0x08000a54   0x00000005   PAD
+    0x20000080        -       0x00000200   Zero   RW           68    HEAP                startup_stm32f429xx.o
+    0x20000280        -       0x00000400   Zero   RW           67    STACK               startup_stm32f429xx.o
 
 
 ==============================================================================
@@ -694,16 +700,16 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
 
-      1418          0          0          0          0       5174   gpio.o
-       340          0          4          0          3       2334   led.o
+      1362          0          0          0          0       5174   gpio.o
+       224          0          4          0          3       2631   led.o
          0          0          0         24          0       2136   led_cfg.o
-        34          0          0          0          0        799   main.o
+        58          0          0          0          0        824   main.o
         74          0          0          0          0       1363   rcc.o
         64         26        428          0       1536        868   startup_stm32f429xx.o
         18          0          0          0          0       2681   system_stm32f4xx.o
 
     ----------------------------------------------------------------------
-      1954         26        464         24       1544      15355   Object Totals
+      1806         26        464         24       1544      15677   Object Totals
          0          0         32          0          0          0   (incl. Generated)
          6          0          0          0          5          0   (incl. Padding)
 
@@ -755,15 +761,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-      2304         50        464         24       1640      15847   Grand Totals
-      2304         50        464         24       1640      15847   ELF Image Totals
-      2304         50        464         24          0          0   ROM Totals
+      2156         50        464         24       1640      16169   Grand Totals
+      2156         50        464         24       1640      16169   ELF Image Totals
+      2156         50        464         24          0          0   ROM Totals
 
 ==============================================================================
 
-    Total RO  Size (Code + RO Data)                 2768 (   2.70kB)
+    Total RO  Size (Code + RO Data)                 2620 (   2.56kB)
     Total RW  Size (RW Data + ZI Data)              1664 (   1.62kB)
-    Total ROM Size (Code + RO Data + RW Data)       2792 (   2.73kB)
+    Total ROM Size (Code + RO Data + RW Data)       2644 (   2.58kB)
 
 ==============================================================================
 

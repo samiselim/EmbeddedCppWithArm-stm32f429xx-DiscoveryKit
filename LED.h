@@ -17,8 +17,10 @@ class led
     private:
     public:
     led(); // Constructor to init Led State 
-    void set_Led_State(Led_State_t _state , MGPIO_PIN_NUMBER_t Led_Num);// Method to Set Led state ON or OFF
-    Led_State_t get_Led_State( MGPIO_PIN_NUMBER_t Led_Num); // Method To get Led State 
+    void LED_set_Led_State(Led_State_t _state , MGPIO_PIN_NUMBER_t Led_Num);// Method to Set Led state ON or OFF
+    Led_State_t LED_get_Led_State( MGPIO_PIN_NUMBER_t Led_Num); // Method To get Led State 
+    void LED_ToggleLed(MGPIO_PIN_NUMBER_t Led_Num);
+    
 };
 
 
