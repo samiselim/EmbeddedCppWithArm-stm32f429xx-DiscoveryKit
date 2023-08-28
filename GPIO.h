@@ -5,7 +5,7 @@
 
 #define NULL (void*)0
 #define MGPIO_BASE 0x40020000
-
+#define NOTCARE -1
 #define MODER(x)    (*(volatile long *) ((0x400 * x)+ (MGPIO_BASE) + (0x00)))
 #define OTYPER(x)   (*(volatile long *) ((0x400 * x)+ (MGPIO_BASE) + (0x04)))
 #define OSPEEDR(x)  (*(volatile long *) ((0x400 * x)+ (MGPIO_BASE) + (0x08)))
@@ -110,12 +110,8 @@ typedef enum
 
 
 
-class MGPIO_PinConfig
+typedef struct 
 {
-    public:
-    MGPIO_PinConfig();
-    MGPIO_ErrorType_t MGPIO_CfgIsOk();
-    MGPIO_ErrorType_t MGPIO_cfg_Error;
     MGPIO_PORTS_t MGPIO_portName;
     MGPIO_PIN_NUMBER_t MGPIO_pinNumber;
     MGPIO_PIN_STATE_t MGPIO_pinState;    
@@ -124,12 +120,8 @@ class MGPIO_PinConfig
     MGPIO_OUT_TYPE_t MGPIO_outType;
     MGPIO_PULL_UP_DOWN_t MGPIO_pullUpDown;
     MGPIO_AF_t MGPIO_AFtype;
+}MGPIO_PinConfig;
 
-    ~MGPIO_PinConfig();
-    private:
-
-
-};
 
 class MGPIO
 {
